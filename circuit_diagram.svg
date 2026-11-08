@@ -1,0 +1,174 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" width="1600" height="1100" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#141c30" stroke-width="1"/></pattern>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<style>
+.t{fill:#e6edf7;font-size:14px}
+.tb{fill:#ffffff;font-size:15px;font-weight:700}
+.s{fill:#9aa4b8;font-size:12px}
+.h{fill:#ffb800;font-weight:700;font-size:13px;letter-spacing:2px}
+.pin{fill:#cfe0ff;font-size:12px;font-weight:600}
+.box{fill:#121a2e;stroke:#3a4a78;stroke-width:2}
+.dash{fill:none;stroke:#44527a;stroke-width:2;stroke-dasharray:8 6}
+.w5{stroke:#ff6b6b;stroke-width:3;fill:none;stroke-linejoin:round}
+.w33{stroke:#ffa733;stroke-width:3;fill:none;stroke-linejoin:round}
+.wg{stroke:#9aa4b8;stroke-width:3;fill:none;stroke-linejoin:round}
+.ws{stroke:#ffd84d;stroke-width:3;fill:none;stroke-linejoin:round}
+.wf{stroke:#ff4fd8;stroke-width:4.5;fill:none;stroke-linejoin:round}
+.wfd{stroke:#ff4fd8;stroke-width:4.5;fill:none;stroke-dasharray:12 7;stroke-linejoin:round}
+.dot{fill:#ffffff}
+</style>
+</defs>
+<rect width="1600" height="1100" fill="#0b0f1a"/>
+<rect width="1600" height="1100" fill="url(#grid)"/>
+
+<text x="800" y="40" text-anchor="middle" fill="#ffffff" font-size="28" font-weight="800" letter-spacing="3">SMART BOOM · ESP32 REMOTE CRACKER IGNITER</text>
+<text x="800" y="64" text-anchor="middle" fill="#ffb800" font-size="15" font-weight="700" letter-spacing="4">CIRCUIT DIAGRAM · TECHTADKA360</text>
+
+<rect x="30" y="120" width="400" height="190" rx="14" class="dash"/>
+<text x="46" y="142" class="h">LOGIC SUPPLY</text>
+
+<rect x="50" y="165" width="90" height="110" rx="8" class="box"/>
+<text x="95" y="212" text-anchor="middle" class="tb" style="font-size:13px">BATTERY A</text>
+<text x="95" y="232" text-anchor="middle" class="s">7.4V Li-ion</text>
+<text x="150" y="196" class="s">+</text>
+<text x="150" y="256" class="s">−</text>
+<path class="w5" d="M140 200H190"/>
+<circle cx="190" cy="200" r="4" class="dot"/>
+<circle cx="240" cy="200" r="4" class="dot"/>
+<path d="M190 200L236 180" stroke="#ffffff" stroke-width="3" fill="none"/>
+<path class="w5" d="M240 200H290"/>
+<text x="215" y="168" text-anchor="middle" class="t" style="font-size:12px">SW1</text>
+<text x="215" y="224" text-anchor="middle" class="s" style="font-size:11px">logic on/off</text>
+<path class="wg" d="M140 240H290"/>
+
+<rect x="290" y="165" width="110" height="105" rx="8" class="box"/>
+<text x="345" y="182" text-anchor="middle" class="tb" style="font-size:10px">BUCK CONVERTER</text>
+<text x="345" y="264" text-anchor="middle" class="s" style="font-size:11px">set exactly 5.0V</text>
+<text x="297" y="204" class="pin">IN+</text>
+<text x="297" y="244" class="pin">IN−</text>
+<text x="393" y="204" text-anchor="end" class="pin">5V</text>
+<text x="393" y="244" text-anchor="end" class="pin">GND</text>
+
+<rect x="520" y="105" width="200" height="655" rx="14" class="box"/>
+<rect x="580" y="112" width="80" height="22" rx="3" fill="#1b2644" stroke="#3a4a78"/>
+<text x="620" y="155" text-anchor="middle" class="tb" style="font-size:16px">ESP32</text>
+<text x="620" y="173" text-anchor="middle" class="s">DEV MODULE</text>
+<text x="528" y="204" class="pin">VIN</text>
+<text x="528" y="244" class="pin">GND</text>
+<text x="712" y="194" text-anchor="end" class="pin">GPIO18</text>
+<text x="712" y="354" text-anchor="end" class="pin">3V3</text>
+<text x="712" y="384" text-anchor="end" class="pin">GPIO22 · SCL</text>
+<text x="712" y="414" text-anchor="end" class="pin">GPIO21 · SDA</text>
+<text x="712" y="564" text-anchor="end" class="pin">GPIO19</text>
+<text x="712" y="684" text-anchor="end" class="pin">GPIO23</text>
+<text x="620" y="740" text-anchor="middle" class="s" style="font-size:11px">GPIO 2 · 4 · 5 · 15 unused (boot pins)</text>
+
+<path class="w5" d="M400 200H520"/>
+<path class="wg" d="M400 240H520"/>
+<path class="w5" d="M460 200V90H870V150H900"/>
+<path class="wg" d="M440 240V930H1080"/>
+<path class="wg" d="M840 230V930"/>
+<text x="470" y="190" class="s" fill="#ff6b6b" style="fill:#ff6b6b">5V</text>
+
+<rect x="900" y="105" width="200" height="155" rx="10" class="box"/>
+<text x="1000" y="127" text-anchor="middle" class="tb" style="font-size:12px">1-CH 5V RELAY MODULE</text>
+<text x="908" y="154" class="pin">VCC</text>
+<text x="908" y="194" class="pin">IN</text>
+<text x="908" y="234" class="pin">GND</text>
+<text x="1092" y="154" text-anchor="end" class="pin">NC</text>
+<text x="1092" y="194" text-anchor="end" class="pin">COM</text>
+<text x="1092" y="234" text-anchor="end" class="pin">NO</text>
+<path class="ws" d="M720 190H900"/>
+<path class="wg" d="M900 230H840"/>
+
+<rect x="900" y="300" width="200" height="130" rx="10" class="box"/>
+<text x="1020" y="352" text-anchor="middle" class="tb" style="font-size:12px">0.96" OLED</text>
+<text x="1020" y="370" text-anchor="middle" class="s">SSD1306 · I2C 0x3C</text>
+<text x="908" y="324" class="pin">GND</text>
+<text x="908" y="354" class="pin">VCC</text>
+<text x="908" y="384" class="pin">SCL</text>
+<text x="908" y="414" class="pin">SDA</text>
+<path class="wg" d="M900 320H840"/>
+<path class="w33" d="M720 350H900"/>
+<path class="ws" d="M720 380H900"/>
+<path class="ws" d="M720 410H900"/>
+
+<path class="ws" d="M720 560H900"/>
+<path class="ws" d="M900 560H912L918 546L930 574L942 546L948 574L954 560H1000"/>
+<text x="930" y="596" text-anchor="middle" class="s">220 Ω</text>
+<path d="M1000 540V580L1030 560Z" fill="#2dff8f" filter="url(#glow)"/>
+<path d="M1030 540V580" stroke="#2dff8f" stroke-width="4" filter="url(#glow)"/>
+<text x="1020" y="606" text-anchor="middle" class="s">GREEN LED</text>
+<path class="wg" d="M1030 560H1080V930"/>
+
+<path class="ws" d="M720 680H972"/>
+<circle cx="990" cy="680" r="18" fill="#1b2644" stroke="#ffd84d" stroke-width="3"/>
+<text x="990" y="686" text-anchor="middle" class="tb" style="font-size:16px">+</text>
+<path class="wg" d="M1008 680H1080"/>
+<text x="990" y="722" text-anchor="middle" class="s">ACTIVE BUZZER</text>
+
+<circle cx="460" cy="200" r="4.5" class="dot"/>
+<circle cx="440" cy="240" r="4.5" class="dot"/>
+<circle cx="840" cy="230" r="4.5" class="dot"/>
+<circle cx="840" cy="320" r="4.5" class="dot"/>
+<circle cx="1080" cy="560" r="4.5" class="dot"/>
+<circle cx="1080" cy="680" r="4.5" class="dot"/>
+<circle cx="840" cy="930" r="4.5" class="dot"/>
+<circle cx="440" cy="930" r="4.5" class="dot"/>
+<circle cx="1080" cy="930" r="4.5" class="dot"/>
+<text x="760" y="952" text-anchor="middle" class="s">COMMON GND RAIL</text>
+
+<rect x="1180" y="60" width="380" height="590" rx="16" class="dash" stroke="#ff4fd8"/>
+<text x="1195" y="90" class="h" style="fill:#ff4fd8;font-size:11px;letter-spacing:1.5px">FIRING CIRCUIT · ISOLATED · HIGH CURRENT</text>
+<text x="1195" y="122" class="tb" style="font-size:12px">MASTER SWITCH (SW2)</text>
+<text x="1195" y="138" class="s" style="fill:#ff9a9a">keep OFF until at a safe distance</text>
+
+<path class="wf" d="M1100 190H1200"/>
+<circle cx="1200" cy="190" r="5" class="dot"/>
+<circle cx="1250" cy="190" r="5" class="dot"/>
+<path d="M1200 190L1244 168" stroke="#ffffff" stroke-width="3" fill="none"/>
+<path class="wf" d="M1250 190H1480V260"/>
+<path class="wf" d="M1100 230H1330V262"/>
+<path class="wfd" d="M1330 262V400"/>
+<path d="M1330 400L1318 410L1342 422L1318 434L1342 446L1318 458L1330 470" fill="none" stroke="#ff9a3c" stroke-width="4" filter="url(#glow)"/>
+<text x="1305" y="428" text-anchor="end" class="tb" style="font-size:12px">NICHROME</text>
+<text x="1305" y="445" text-anchor="end" class="s">1.5 – 3 Ω</text>
+<text x="1342" y="318" class="tb" style="font-size:12px">LONG WIRE</text>
+<text x="1342" y="335" class="s">5 – 10 m</text>
+<text x="1342" y="351" class="s">≥ 1 sq mm</text>
+<path d="M1344 432H1370" stroke="#ff9a3c" stroke-width="2" stroke-dasharray="3 3"/>
+<rect x="1372" y="400" width="36" height="72" rx="4" fill="#c62828"/>
+<rect x="1372" y="418" width="36" height="8" fill="#ffd84d"/>
+<rect x="1372" y="446" width="36" height="8" fill="#ffd84d"/>
+<path d="M1390 400V384" stroke="#ffffff" stroke-width="2"/>
+<circle cx="1390" cy="380" r="3" fill="#ffb800" filter="url(#glow)"/>
+<text x="1390" y="492" text-anchor="middle" class="s">CRACKER FUSE</text>
+<path class="wfd" d="M1330 470V560H1480"/>
+<path class="wf" d="M1480 560V340"/>
+<text x="1400" y="582" text-anchor="middle" class="s">LONG WIRE (RETURN)</text>
+
+<rect x="1430" y="260" width="100" height="80" rx="8" class="box" stroke="#ff4fd8"/>
+<text x="1480" y="293" text-anchor="middle" class="tb" style="font-size:12px">BATTERY B</text>
+<text x="1480" y="311" text-anchor="middle" class="s">2S Li-ion 7.4V</text>
+<text x="1493" y="256" class="s">+</text>
+<text x="1493" y="356" class="s">−</text>
+<text x="1195" y="620" style="fill:#ff9a9a;font-size:13px;font-weight:700">Battery B (−) must NOT connect to ESP32 GND</text>
+
+<rect x="40" y="380" width="360" height="360" rx="14" class="box"/>
+<text x="56" y="406" class="h">WIRE COLOURS</text>
+<path class="w5" d="M56 430H100"/><text x="112" y="434" class="t" style="font-size:13px">5V power</text>
+<path class="w33" d="M56 456H100"/><text x="112" y="460" class="t" style="font-size:13px">3.3V power</text>
+<path class="ws" d="M56 482H100"/><text x="112" y="486" class="t" style="font-size:13px">Signal (GPIO / I2C)</text>
+<path class="wg" d="M56 508H100"/><text x="112" y="512" class="t" style="font-size:13px">Ground</text>
+<path class="wf" d="M56 534H100"/><text x="112" y="538" class="t" style="font-size:13px">High-current firing path</text>
+<text x="56" y="578" class="h">NOTES</text>
+<text x="56" y="604" class="t" style="font-size:13px">1. Set the buck converter to exactly 5.0V</text>
+<text x="70" y="622" class="s">before connecting the ESP32 and relay.</text>
+<text x="56" y="648" class="t" style="font-size:13px">2. Wires crossing without a dot are not</text>
+<text x="70" y="666" class="s">connected.</text>
+<text x="56" y="692" class="t" style="font-size:13px">3. Use an active buzzer, not a passive one.</text>
+<text x="56" y="718" class="t" style="font-size:13px">4. Test everything with no cracker attached.</text>
+
+<text x="800" y="1060" text-anchor="middle" fill="#6f7b96" font-size="13">TechTadka360 · github.com/Mr-soumik · Educational project: adults only, keep 10+ metres away</text>
+</svg>
